@@ -1,6 +1,5 @@
 Feature: Create Account
-
-    As a user, I want to be able to create an account from Account creation Menu
+  As a user, I want to be able to create an account from Account creation Menu
 
   Scenario: Creating an Account
     Given That i am on the start page

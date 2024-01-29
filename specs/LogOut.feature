@@ -1,6 +1,5 @@
 Feature: Log Out
-
-    As a user i should be able to log out form my account
+  As a user i should be able to log out form my account
 
   Scenario: Log Out
     Given That i am on the start page
