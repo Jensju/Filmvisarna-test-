@@ -1,7 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 /* No duplicate steps, this one already in CheckBookings.js
-Given('That i am on the start page', () => {});*/
+Given('that i am on the start page', () => {});*/
 
 Given('I am on the log in page', () => {
   // TODO: implement step

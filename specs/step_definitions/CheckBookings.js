@@ -1,6 +1,6 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-Given('That i am on the start page', () => {
+Given('that i am on the start page', () => {
   // TODO: implement step
 });
 
