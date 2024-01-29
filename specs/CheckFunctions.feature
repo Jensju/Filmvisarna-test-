@@ -1,6 +1,6 @@
 Feature: LoggedIn Feature
 
-    I should see a variety of features when logged in
+    As a user, I should see a variety of features when logged in
 
   Scenario: UserFeatures
     Given That i am on the start page

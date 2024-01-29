@@ -1,6 +1,6 @@
 Feature: Check my Bookings
 
-    I should be able to check my bookings while logged in
+    As a User, I should be able to check my bookings while logged in
 
   Scenario: Check Bookings
     Given That i am on the start page

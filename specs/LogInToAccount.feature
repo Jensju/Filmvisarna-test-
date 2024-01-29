@@ -1,6 +1,6 @@
 Feature: Log in to Account
 
-    I want to be able to log into an existing account
+    As a user, I want to be able to log into an existing account
 
   Scenario: Log in
     Given That i am on the start page
