@@ -3,6 +3,6 @@ Feature: LoggedIn Feature
 
   Scenario: UserFeatures
     Given that i am on the start page
-    And I am logged in
+    And I am logged in using "AdminAccount" and "AdminPassword"
     When I open user features
     Then I should have access to user features

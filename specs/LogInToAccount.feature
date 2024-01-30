@@ -4,5 +4,5 @@ Feature: Log in to Account
   Scenario: Log in
     Given that i am on the start page
     And I am on the log in page
-    When I fill in my account details
+    When I fill in my account details using "AdminMejl" and "AdminPassword"
     Then I should be able to log in

@@ -4,8 +4,11 @@ Given('that i am on the start page', () => {
   cy.visit(`/`);
 });
 
-Given('I am logged in', () => {
-  // TODO: implement step
+Given('I am logged in using {string} and {string}', (adminEmail, adminPassword) => {
+  cy.get('#basic-nav-dropdown').click();
+  cy.get('a').contains('Logga in').click();
+  cy.get('input[name="emailInput"]').type(adminEmail);
+  cy.get('input[type="password"]').type(adminPassword);
 });
 
 When('I check bookings', () => {
