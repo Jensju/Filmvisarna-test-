@@ -13,4 +13,3 @@ Feature: Filtering of views by date
       | 2024-02-25 |
       | 2024-03-01 |
       | 2024-02-15 |
-     
