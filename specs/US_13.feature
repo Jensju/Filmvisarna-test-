@@ -24,4 +24,4 @@ Feature: View of movie trailers
 
   Scenario: Navigate Back to Home Page
     Then the user click on the "Back" button or a smilar navigation element
-    Then the user should be redirected back to the home page
+    Then the user should be redirected back to the home page.
