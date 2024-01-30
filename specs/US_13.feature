@@ -6,22 +6,20 @@ Feature: View of movie trailers
 
   Scenario: Navigate to Movie Details Page
 
-    Then the user should be directed to the movie details page
+    And The user can see the movie alternatives for determined days and times
+    When The user can see the trailer of the movie 
 
 
   Scenario Outline: View Movie Trailers
-    When the user look at the trailers videos
-    Then the user should open the trailers videos and decide to watch one of the movies
+    When The user can select one of the day and a movie under selected day
+    Then The user should be directed to the movie details page
+    Then The user should open the trailers videos and decide to watch one of the movies
     Examples:
-      | Gladiator            |
+      | Back to the Future   |
       | Pulp Fiction         |
-      | Interstellar         |
-      | Shawshank Redemption |
-      | Back to Future       |
-      | Schindler's List     |
-      | the Usual Suspects   |
-      | Happy Gilmore        |
+      | Gladiator            |
+      | Star Wars: Episode V -The Empire Strikes Back |
 
   Scenario: Navigate Back to Home Page
-    Then the user click on the "Back" button or a smilar navigation element
-    Then the user should be redirected back to the home page.
+    Then The user click on the "Back" button or a smilar navigation element
+    Then The user should be redirected back to the home page.
