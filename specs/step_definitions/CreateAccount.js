@@ -10,11 +10,11 @@ Given('I am on the account creation menu', () => {
 
 When('I fill in account creation details using {string} as my email and {string} as my password', (email, password) => {
   cy.get('input[name="emailInput"]').type(email);  
-  cy.get('input[type="password"]').type(password);
-  cy.get('button').contains('BLI MEDLEM').click();
+  cy.get('input[type="password"]').type(password);  
 });
 
 Then('I should be able to create an account', () => {
+  cy.get('button').contains('BLI MEDLEM').click();
   cy.wait(5000)
   cy.get('h1').contains('Logga in').should('be.visible');
 });
