@@ -15,5 +15,5 @@ When('I fill in account creation details using {string} as my email and {string}
 
 Then('I should be able to create an account', () => {
   cy.get('button').contains('BLI MEDLEM').click();
-  //cy.get('button').contains('Logga In').should(exist);
+  cy.get('button').contains('Logga In').should(exist);
 });

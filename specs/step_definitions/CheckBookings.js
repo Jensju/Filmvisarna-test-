@@ -10,12 +10,15 @@ Given('I am logged in using {string} and {string}', (adminEmail, adminPassword) 
   cy.get('a').contains('Logga in').click();
   cy.get('input[name="emailInput"]').type(adminEmail);
   cy.get('input[type="password"]').type(adminPassword);
+  cy.get('button').contains('LOGGA IN').click();
 });
 
 When('I check bookings', () => {
-  //Osäker om det går att testa, då log in verkar inte fungera
+  cy.get('#basic-nav-dropdown').click();
+  cy.get('a').contains('Bokningar').click();
 });
 
 Then('I should see my bookings', () => {
-  // TODO: implement step
+  cy.get('h2').contains('Bokningsdetaljer').should('be.visible');
+  cy.get('h2').contains('Bokningshistorik').should('be.visible');
 });

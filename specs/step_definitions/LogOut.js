@@ -7,9 +7,10 @@ Given('that i am on the start page', () => {});*/
 Given('I am logged in using {string} and {string}', (a, b) => {});*/
 
 When('I click the log out button', () => {
-  //Osäker om det går att testa, då log in verkar inte fungera
+  cy.get('#basic-nav-dropdown').click();
+  cy.get('a').contains('Logga ut').click();
 });
 
 Then('I should log out', () => {
-  // TODO: implement step
+  cy.get('p').contains('Du är inloggad').should('not.exist');
 });

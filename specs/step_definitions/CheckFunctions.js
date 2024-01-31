@@ -7,7 +7,7 @@ Given('that i am on the start page', () => {});*/
 Given('I am logged in using {string} and {string}', (a, b) => {});*/
 
 When('I open user features', () => {
-  //Osäker om det går att testa, då log in verkar inte fungera
+  //Bör denna raderas då det inte finns särskillt många features att kolla på som inte täcks av CheckBookings
 });
 
 Then('I should have access to user features', () => {
