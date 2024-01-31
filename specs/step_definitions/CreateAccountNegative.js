@@ -14,5 +14,5 @@ When('My email has already been used', () => {
 });
 
 Then('i should not be able to make an account', () => {
-  // TODO: implement step
+  cy.get('button').contains('BLI MEDLEM');
 });
