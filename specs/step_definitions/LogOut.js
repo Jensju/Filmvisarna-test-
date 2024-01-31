@@ -7,7 +7,7 @@ Given('that i am on the start page', () => {});*/
 Given('I am logged in using {string} and {string}', (a, b) => {});*/
 
 When('I click the log out button', () => {
-  // TODO: implement step
+  //Osäker om det går att testa, då log in verkar inte fungera
 });
 
 Then('I should log out', () => {

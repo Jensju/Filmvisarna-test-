@@ -13,7 +13,7 @@ Given('I am logged in using {string} and {string}', (adminEmail, adminPassword) 
 });
 
 When('I check bookings', () => {
-  // TODO: implement step
+  //Osäker om det går att testa, då log in verkar inte fungera
 });
 
 Then('I should see my bookings', () => {
