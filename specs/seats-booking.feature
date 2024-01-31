@@ -17,6 +17,7 @@ Feature: Seats booking
 
   Scenario: Booking of already reserved seat
     When I choose the film "Gladiator" in "21:00" on "Söndag, 2024-02-11" from the list of screenings
+    And I select the first available time from the list
     And I press on the button "Gå vidare" in the date box
     And I choose "2" "Vuxen" seats
     And I press on the button "Gå vidare" in the number of seats box
@@ -25,7 +26,7 @@ Feature: Seats booking
     And I enter my email "test.yev@gmail.com" in the input field in the confirmation box
     And I press on the button "Boka"
     And I confirm the booking and press on the button "Boka"
-    And I click on the button "Startsida"
+    And I go to the start page
     And I choose the film "Gladiator" in "21:00" on "Söndag, 2024-02-11" from the list of screenings
     And I press on the button "Gå vidare"  in the date box
     And I choose "1" "Vuxen" seats
