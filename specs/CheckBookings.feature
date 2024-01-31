@@ -3,6 +3,6 @@ Feature: Check my Bookings
 
   Scenario: Check Bookings
     Given that i am on the start page
-    And I am logged in using "AdminAccount" and "AdminPassword"
+    And I am logged in using "testMejlFilmtestarna@testMejl12345.com" and "Test123456123456"
     When I check bookings
     Then I should see my bookings

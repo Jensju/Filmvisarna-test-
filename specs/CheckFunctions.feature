@@ -3,6 +3,6 @@ Feature: LoggedIn Feature
 
   Scenario: UserFeatures
     Given that i am on the start page
-    And I am logged in using "AdminAccount" and "AdminPassword"
+    And I am logged in using "testMejlFilmtestarna@testMejl12345.com" and "Test123456123456"
     When I open user features
     Then I should have access to user features

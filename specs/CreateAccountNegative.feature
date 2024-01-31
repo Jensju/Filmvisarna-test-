@@ -5,8 +5,7 @@ Feature: Fail to Create Account
   Scenario: email already taken
     Given that i am on the start page
     And I am on the account creation menu
-    When I fill in account creation details using "testMejlFilmtestarna@gmail.com" as my email and "123456" as my password
-    And My email has already been used
+    When I fill in account creation details using, my email has already been used "testMejlFilmtestarna@testMejl12345.com" as my email and "Test123456123456" as my password
     Then i should not be able to make an account
 
   

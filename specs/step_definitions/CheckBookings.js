@@ -1,6 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 Given('that i am on the start page', () => {
+  cy.viewport(1680, 1050);
   cy.visit(`/`);
 });
 
