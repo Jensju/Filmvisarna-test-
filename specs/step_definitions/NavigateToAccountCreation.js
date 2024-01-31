@@ -4,9 +4,11 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 Given('that i am on the start page', () => {});*/
 
 When('I click on the button to create an Account', () => {
-  // TODO: implement step
+  cy.get('#basic-nav-dropdown').click();
+  cy.get('a').contains('Bli medlem').click();
 });
 
 Then('I should see the account creation Menu', () => {
-  // TODO: implement step
+  cy.get('input[name="emailInput"]').should('exist')
+  cy.get('input[type="password"]').should('exist')
 });
