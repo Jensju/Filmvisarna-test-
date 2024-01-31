@@ -4,5 +4,5 @@ Feature: Create Account
   Scenario: Creating an Account
     Given that i am on the start page
     And I am on the account creation menu
-    When I fill in account creation details using "testMejlFilmtestarna@testMejl123.com" as my email and "Test123456" as my password
+    When I fill in account creation details using "testMejlFilmtestarna@testMejl17.com" as my email and "Test123456" as my password
     Then I should be able to create an account
