@@ -1,15 +1,18 @@
 Feature: Check linked trailers
   As a visitor you should be able to watch a movie trailer linked to youtube before your decide to book a ticket.
 
-  Scenario Outline: click on the <movie> poster and then klick the youtube preview to start the trailer
+  Background: 
     Given that I am on the main page
-    And that I have choosen the <movie> poster in the list
-    When I click on the youtube trailer
-    Then the trailer should play
 
-      | movie  |
-      | first  |
-      | second |
-      | third  |
-      | forth  |
-      | fifth  |
+  Scenario Outline: click on the "<movie>" poster and then choose the youtube preview to maintain that the trailer exist
+    When I have choosen the "<movie>" poster in the list
+    Then the trailer should appear
+
+    Examples:
+      | movie |
+      | 1     |
+      | 2     |
+      | 3     |
+      | 4     |
+      | 5     |
+     

@@ -1,5 +1,10 @@
 # Filmvisarna-test-
 
+Kör test:
+npm run test-ui 
+
+
+
 Trigga med input istället för Mousedown
 cy.get('a').trigger('input')
 
