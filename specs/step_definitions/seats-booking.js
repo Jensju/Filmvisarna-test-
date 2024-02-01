@@ -41,25 +41,41 @@ When('I choose the film {string} in {string} on {string} from the list of screen
 
 Then('I should get an alert message {string}', (messageText) => {
   // TODO: implement step
-  cy.on( 'window:alert', ( messageText ) => {
-    throw new Error( 'Unexpected challenge window.alert()' )
-  } )
-  // cy.on( 'window:alert', ( str ) => {
-  //   if ( !str.includes( message ) ) {
-  //     throw new Error( `Alert message does not contain "${ message }"` );
-  //   }
-  // } );
+  const stub = cy.stub()
+  cy.on( 'window:alert', stub )
+  cy.get( '.flex-space-between button' ).contains( 'Gå vidare' ).click()
+    .then( () => {
+      expect( stub.getCall( 0 ) ).to.be.calledWith( messageText )
+    } )
 });
 
-Given('I select a day that has already passed in the filter by date {string}', (a) => {
+When('I select a day that has already passed in the filter by date', () => {
   // TODO: implement step
+  cy.get( '.filterScreenings' )
+    .then( $el => {
+      const today = new Date( $el.attr( 'value' ) );
+      const yesterday = new Date( today );
+      yesterday.setDate( yesterday.getDate() - 1 );
+      const yesterdayFormatted = yesterday.toISOString().slice( 0, 10 );
+      cy.get( '.filterScreenings' ).type( yesterdayFormatted ).trigger( 'input' );
+    } );
 });
+
 
 When( 'I choose {string} reserved seats', (units) => {
   // TODO: implement step
   cy.get( '.default-seat.occupied-seat:first' )
     .click( { force: true } )
  } );
+
+Then( 'I should not see any available screenings to choose from', () => {
+  // TODO: implement step
+  cy.get( '.screeningsContainer' )
+    .then( ( $el ) => {
+      expect( $el ).to.not.be.visible;
+    } );
+} );
+
 
 Then('the system displays an alert message', () => {
   // TODO: implement step
@@ -81,14 +97,18 @@ When( 'I enter email {string} in the input field in the confirmation box', ( ema
 Then('the system displays a message {string}', (messageText) => {
   // TODO: implement step
   cy.get( '.accordion-body' )
-  .find( '.text-danger' )
-  .contains( messageText )
-  .should('be.visible')
+    .find( '.text-danger' )
+    .contains( messageText )
+    .then( ( $el ) => {
+      expect( $el ).to.be.visible;
+    } );
 });
 
 Then('I should not receive a request for a booking confirmation', () => {
   // TODO: implement step
   cy.get( '.modal-header' )
     .contains( 'Bekräfta bokning' )
-    .should( 'not.exist' )
+    .then( ( $el ) => {
+      expect( $el ).to.not.be.visible;
+    } );
 });

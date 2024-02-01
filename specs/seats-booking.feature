@@ -5,6 +5,10 @@ Feature: Seats booking
   Background: starting booking
     Given that I am on the start page
 
+  Scenario: Booking seats for a screening that har already taken place is not possible
+    When I select a day that has already passed in the filter by date
+    Then I should not see any available screenings to choose from
+
   Scenario: Booking of available seats
     Given I select the first available screening from the list
     And I select the first available time from the list
@@ -15,7 +19,7 @@ Feature: Seats booking
     And I should be able to press on the button "Gå vidare" in the seats box
     And I should see the booking confirmation box
 
-  Scenario: Booking of already reserved seat
+  Scenario: Booking of already occupied seat is not possible
     Given I choose the film "Star Wars: Episode V - The Empire Strikes Back" in "21:00" on "Fredag, 2024-10-25" from the list of screenings
     And I choose the session "Fredag, 2024-10-25, 21:00" from the list
     And I press on the button "Gå vidare" in the date box
@@ -33,17 +37,9 @@ Feature: Seats booking
     And I choose "1" "Vuxen" seats
     And I press on the button "Gå vidare" in the number of seats box
     When I choose "1" reserved seats
-    And I press on the button "Gå vidare" in the seats box
     Then I should get an alert message "Välj säten innan du fortsätter"
-    
-  Scenario: Booking of seats for an already completed screening
-    Given I select a day that has already passed in the filter by date "01.03.2024"
-    And I choose the film "Gladiator" in "18:00" on "Onsdag, 2024-01-03" from the list of screenings
-    And I select the first available time from the list
-    When I press on the button "Gå vidare" in the date box
-    Then the system displays an alert message
 
-  Scenario: The visitor cannot complete the booking when entering an incorrect email address
+  Scenario: Booking seats is not possible if visitor enter an incorrect email address.
     When I choose the film "Gladiator" in "21:00" on "Söndag, 2024-02-11" from the list of screenings
     And I select the first available time from the list
     And I press on the button "Gå vidare" in the date box
