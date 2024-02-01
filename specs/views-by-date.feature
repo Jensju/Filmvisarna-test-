@@ -5,8 +5,9 @@ Feature: Filtering of views by date
     Given that I am on the main page
     And choose a date in the calendar
     When I click the "<date>" in the calendar
-    Then I expect the viewing of the movie list to be updated
+    Then I expect the "<date>" of the movie list to be updated
 
+    Examples:
       | date       |
       | 2024-02-01 |
       | 2024-02-12 |
