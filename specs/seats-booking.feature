@@ -9,40 +9,43 @@ Feature: Seats booking
     Given I select the first available screening from the list
     And I select the first available time from the list
     And I press on the button "Gå vidare" in the date box
-    When I choose "2" "Vuxen" seats
+    When I choose "1" "Vuxen" seats
     And I press on the button "Gå vidare" in the number of seats box
-    Then I should be able to choose "2" available seats
+    Then I should be able to choose "1" available seats
     And I should be able to press on the button "Gå vidare" in the seats box
     And I should see the booking confirmation box
 
   Scenario: Booking of already reserved seat
-    When I choose the film "Gladiator" in "21:00" on "Söndag, 2024-02-11" from the list of screenings
-    And I select the first available time from the list
+    Given I choose the film "Star Wars: Episode V - The Empire Strikes Back" in "21:00" on "Fredag, 2024-10-25" from the list of screenings
+    And I choose the session "Fredag, 2024-10-25, 21:00" from the list
     And I press on the button "Gå vidare" in the date box
-    And I choose "2" "Vuxen" seats
+    And I choose "1" "Vuxen" seats
     And I press on the button "Gå vidare" in the number of seats box
-    And I choose "2" available seat
+    And I choose "1" available seat
     And I press on the button "Gå vidare" in the seats box
     And I enter my email "test.yev@gmail.com" in the input field in the confirmation box
     And I press on the button "Boka"
     And I confirm the booking and press on the button "Boka"
     And I go to the start page
-    And I choose the film "Gladiator" in "21:00" on "Söndag, 2024-02-11" from the list of screenings
-    And I press on the button "Gå vidare"  in the date box
+    And I choose the film "Star Wars: Episode V - The Empire Strikes Back" in "21:00" on "Fredag, 2024-10-25" from the list of screenings
+    And I choose the session "Fredag, 2024-10-25, 21:00" from the list
+    And I press on the button "Gå vidare" in the date box
     And I choose "1" "Vuxen" seats
     And I press on the button "Gå vidare" in the number of seats box
-    And I choose "1" reserved seats
+    When I choose "1" reserved seats
     And I press on the button "Gå vidare" in the seats box
     Then I should get an alert message "Välj säten innan du fortsätter"
     
   Scenario: Booking of seats for an already completed screening
     Given I select a day that has already passed in the filter by date "01.03.2024"
     And I choose the film "Gladiator" in "18:00" on "Onsdag, 2024-01-03" from the list of screenings
+    And I select the first available time from the list
     When I press on the button "Gå vidare" in the date box
     Then the system displays an alert message
 
-  Scenario: Booking of seats when entering incorrect email address in the comfirmation box
+  Scenario: The visitor cannot complete the booking when entering an incorrect email address
     When I choose the film "Gladiator" in "21:00" on "Söndag, 2024-02-11" from the list of screenings
+    And I select the first available time from the list
     And I press on the button "Gå vidare" in the date box
     And I choose "1" "Vuxen" seats
     And I press on the button "Gå vidare" in the number of seats box
@@ -51,6 +54,5 @@ Feature: Seats booking
     And I enter email "test@" in the input field in the confirmation box
     And I press on the button "Boka"
     Then the system displays a message "Vänligen ange en giltig email"
-    And I should not be able to press button "Boka"
-
+    And I should not receive a request for a booking confirmation
   
