@@ -1,8 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-Given('that I am on the land page', () => {
-  cy.visit('/')
-});
+/* No duplicate steps, this one already in check-trailer-links.js
+Given('that I am on the start page', () => {});*/
 
 Given('choose a date in the calendar', () => {
   cy.get('.filterScreenings').should('exist')
