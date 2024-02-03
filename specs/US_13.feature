@@ -3,7 +3,7 @@ Feature: View of movie trailers
 As a visitor, I want to be able to see trailers for movies to better decide whether they interest me or not.
 
 
-  Scenario Outline: View Movie Trailers
+  Scenario: View Movie Trailers
     Given The user is on the home page
     Then The user clicks to time of the "Gladiator"
     Then The user clicks the red button in the video to see the trailer
