@@ -19,7 +19,7 @@ and can give the booking number to the cinema during my visit.
     And I enter my email "test.yev@gmail.com" in the input field in the confirmation box
     And I press on the button "Boka"
     And I confirm the booking and press on the button "Boka"
-    Then I should see a confirmation of booking message
+    Then I should see a booking confirmation message
     And the confirmation message should contain selected seat numbers, which film, date and unique booking number
  
   Scenario: A logged-in user receives a confirmation message after booking 
@@ -38,7 +38,7 @@ and can give the booking number to the cinema during my visit.
     And I enter my email "test.yev@gmail.com" in the input field in the confirmation box
     And I press on the button "Boka"
     And I confirm the booking and press on the button "Boka"
-    Then I should see a confirmation of booking message 
+    Then I should see a booking confirmation message
     And the confirmation message should contain selected seat numbers, which film, date and unique booking number
 
     
@@ -58,7 +58,7 @@ and can give the booking number to the cinema during my visit.
     When I enter my email "test1234567890@gmail.com" in the input field in the confirmation box
     And I press on the button "Boka"
     And I confirm the booking and press on the button "Boka"
-    Then I should see a confirmation of booking message
+    Then I should see a booking confirmation message
     And the confirmation message should contain selected seat numbers, which film, date and unique booking number
 
  

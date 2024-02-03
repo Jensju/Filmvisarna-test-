@@ -79,37 +79,18 @@ When('I press on the button {string} in the number of seats box', (buttonName) =
     .click()
 });
 
-When('I choose {string} available seat', (units) => {
+When( 'I choose {string} available seat', ( units ) => {
   // TODO: implement step
-  // cy.get( '.default-seat.available-seat:first' )
-  //   .click()
-
-  // cy.get( '.default-seat.available-seat' )
-  //   .click()
-
-  // cy.get( '.default-seat.available-seat' ).each( ( $el, index ) => {
-  //   if ( index < units ) {
-  //     cy.wrap( $el ).click();
-  //   }
-  //   })
-  // cy.get( '.default-seat.available-seat' ) 
-  //   .its( 'length' )
-  //   .then( ( length ) => {
-  //     cy.log( `Found ${ length } available seats` );
-  //     const firstThreeSeats = cy.get( '.default-seat.available-seat' ).slice( 0, units ).click()
-  //     // Do something with the first three seats
-  //   } );
-  cy.get( '.default-seat.available-seat:first' )
+  cy.get( '.default-seat.available-seat' )
     .filter( ( _, el ) => {
       const $el = Cypress.$( el );
-      const $nextEls = $el.nextAll( '.default-seat.available-seat' ).slice( 0, units - 1 );
-      return $nextEls.length === units - 1 && !$nextEls.find( '.selected-seat' ).length;
+      const $nextEls = $el.nextUntil( '.default-seat:not(.available-seat)' );
+      return $nextEls.length === units - 1
     } )
     .eq( 0 )
-    // .click( { multiple: true } );
-  .click()
-  } );
-
+    .click( );
+} );
+ 
 When('I press on the button {string} in the seats box', (buttonName) => {
   // TODO: implement step //div.theater-container .flex-space-between
   cy.get( '.flex-space-between' )
@@ -141,7 +122,7 @@ When('I confirm the booking and press on the button {string}', (buttonName) => {
     .click()
 });
 
-Then('I should see a confirmation of booking message', () => {
+Then('I should see a booking confirmation message', () => {
   // TODO: implement step
   cy.url().should( 'eq', 'https://filmvisarna-team5.nodehill.se/bokningsbekraftelse' )
   cy.get( '.row.mx-1.booking-details-container' )

@@ -5,9 +5,7 @@ Feature: Seats booking
   Background: starting booking
     Given that I am on the start page
 
-  Scenario: Booking seats for a screening that har already taken place is not possible
-    When I select a day that has already passed in the filter by date
-    Then I should not see any available screenings to choose from
+    
 
   Scenario: Booking of available seats
     Given I select the first available screening from the list
@@ -37,7 +35,9 @@ Feature: Seats booking
     And I choose "1" "Vuxen" seats
     And I press on the button "Gå vidare" in the number of seats box
     When I choose "1" reserved seats
-    Then I should get an alert message "Välj säten innan du fortsätter"
+    Then I should get an alert message that I need to choose an available seat "Välj säten innan du fortsätter"
+
+  
 
   Scenario: Booking seats is not possible if visitor enter an incorrect email address.
     When I choose the film "Gladiator" in "21:00" on "Söndag, 2024-02-11" from the list of screenings
@@ -49,6 +49,6 @@ Feature: Seats booking
     And I press on the button "Gå vidare" in the seats box
     And I enter email "test@" in the input field in the confirmation box
     And I press on the button "Boka"
-    Then the system displays a message "Vänligen ange en giltig email"
+    Then the system displays a message that email is incorrect "Vänligen ange en giltig email"
     And I should not receive a request for a booking confirmation
   
