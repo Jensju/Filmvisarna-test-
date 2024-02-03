@@ -48,7 +48,7 @@ Then('the user click on the {string} button or a smilar navigation element.', (a
   cy.get('.company-logo').click();
 });
 
-Then('the user should be redirected back to the home page.', () => {
+Then('the user should be redirected back to the main page.', () => {
   // TODO: implement step
   cy.visit('https://filmvisarna-team5.nodehill.se/');
 });
