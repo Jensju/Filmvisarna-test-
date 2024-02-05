@@ -1,4 +1,4 @@
-  Check the ”Hitta hit" Section in the Footer  
+  Feature: Check the ”Hitta hit" Section in the Footer  
    As a visitor, I want to be able to find the cinema.
   
   
