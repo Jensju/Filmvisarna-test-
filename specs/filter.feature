@@ -10,6 +10,11 @@ so that I don't waste my time searching for irrelevant screenings
     When I choose a movie "Pulp Fiction" from the list
     Then I should not see any screening that har already taken place in the screening list
 
+  Scenario: Search for screening that will take place in a month
+    When I am selecting a date one month in advance in the calendar
+    Then screenings that will take place earlier than the selected date should not be displayed for selection
+
+
   Scenario: Booking more seats than there are in the cinema hall
     Given I select the first available screening from the list
     And I select the first available time from the list

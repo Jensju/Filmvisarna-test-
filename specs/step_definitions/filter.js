@@ -19,6 +19,7 @@ Then( 'I should not see any screening that har already taken place in the screen
     const screeningDate = text.match( regex )[ 1 ];
     const currentDate = new Date();
     cy.log( screeningDate )
+    cy.log( currentDate )
     expect( new Date( screeningDate ) ).to.be.greaterThan( currentDate );
   })
   } );
@@ -56,3 +57,32 @@ When( 'I check how many available seats the cinema has and go back to select one
     }
   } )
 } ); 
+
+
+When( 'I am selecting a date one month in advance in the calendar', () => {
+  // TODO: implement step
+  cy.get( '.filterScreenings' )
+    .then( $el => {
+      const today = new Date();
+      const nextMonth = new Date( today.getFullYear(), today.getMonth() + 1, today.getDate() );
+      const nextMonthFormatted = nextMonth.toISOString().slice( 0, 10 );
+      cy.log( nextMonthFormatted )
+      cy.get( '.filterScreenings' ).type( nextMonthFormatted ).trigger( 'input' );
+    } );
+} );
+
+
+Then( 'screenings that will take place earlier than the selected date should not be displayed for selection', () => {
+  cy.get( '.underline.text-center' ).each( ( $el, index, $list) => {
+    const text = $el.text()
+    const regex = /(\d{4}-\d{2}-\d{2})/;
+    const screeningDate = text.match( regex )[ 1 ];
+    const today = new Date();
+    const searchingDate = new Date( today.getFullYear(), today.getMonth() + 1, today.getDate() );
+    const searchingDateFormatted = searchingDate.toISOString().slice( 0, 10 );
+    cy.log( screeningDate ) 
+    cy.log( searchingDateFormatted )
+    expect( new Date( screeningDate ) ).to.be.greaterThan( new Date( searchingDateFormatted ) );
+  } )
+} );
+
