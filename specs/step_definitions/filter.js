@@ -23,3 +23,36 @@ Then( 'I should not see any screening that har already taken place in the screen
   })
   } );
  
+  
+When( 'I check how many seats the cinema has and go back to select one more {string} seat', ( categoryName ) => {
+  // TODO: implement step
+  cy.get( '.default-seat' ).then( ( seats ) => {
+    const totalNumberSeats = seats.length
+    cy.wrap( totalNumberSeats ).as( 'totalNumberSeats' );
+    cy.log( totalNumberSeats )
+
+    cy.get( '.accordion-header' ).contains( '2. Biljettyp och antal' ).find( '.restart-button' ).click()
+
+    let buyButton = cy.get( '.ticket-category' ).contains( categoryName ).parent().should( 'be.visible' ).find( 'button' ).contains( '+' )
+    for ( let i = 0; i < totalNumberSeats; i++ ) {
+      buyButton.click();
+    }
+  } )
+} );
+
+
+When( 'I check how many available seats the cinema has and go back to select one more {string} seat', ( categoryName ) => {
+  // TODO: implement step
+  cy.get( '.default-seat.available-seat' ).then( ( seats ) => {
+    const totalNumberSeats = seats.length
+    cy.wrap( totalNumberSeats ).as( 'totalNumberSeats' );
+    cy.log( totalNumberSeats )
+
+    cy.get( '.accordion-header' ).contains( '2. Biljettyp och antal' ).find( '.restart-button' ).click()
+
+    let buyButton = cy.get( '.ticket-category' ).contains( categoryName ).parent().should( 'be.visible' ).find( 'button' ).contains( '+' )
+    for ( let i = 0; i < totalNumberSeats; i++ ) {
+      buyButton.click();
+    }
+  } )
+} ); 

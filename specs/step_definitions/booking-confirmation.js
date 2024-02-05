@@ -152,3 +152,10 @@ Then('I should not see a confirmation of booking message', () => {
   cy.get( '.row.mx-1.booking-details-container' )
     .should( 'not.be.visible' )
 });
+
+
+//OBS!!!!!!
+// Don't forget to cancel seats booked during testing.
+// Go to the https://filmvisarna-team5.nodehill.se/
+// Log in with the email test.yev@gmail.com and the password Test1234!
+//and in the second account - test1234567890@gmail.com and the password Test1234! 

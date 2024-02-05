@@ -4,9 +4,13 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 Then('I should be able to choose {string} available seats', (units) => {
   // TODO: implement step
   cy.get( '.default-seat.available-seat' )
-  .should('be.visible')
-  cy.get( '.default-seat.available-seat:first' )
-    .click()
+    .filter( ( _, el ) => {
+      const $el = Cypress.$( el );
+      const $nextEls = $el.nextUntil( '.default-seat:not(.available-seat)' );
+      return $nextEls.length === units - 1
+    } )
+    .eq( 0 )
+    .click();
 });
 
 
@@ -95,3 +99,33 @@ Then('I should not receive a request for a booking confirmation', () => {
       expect( $el ).to.not.be.visible;
     } );
 });
+
+
+When( 'I click on {string} to select less than 1 {string} seat', ( emblem, categoryName ) => {
+  // TODO: implement step
+  cy.get( '.ticket-category' )
+    .contains( categoryName )
+    .parent()
+    .find( 'button' )
+    .contains( emblem )
+    .click()
+} );
+ 
+Then( 'I do not go to the next stage of the booking when I click the submit button {string}', (buttonName) => {
+  // TODO: implement step
+  cy.get( 'div.price-component' )
+    .contains( buttonName )
+    .click()
+  // cy.get( 'div.theater-container' ).should( 'not.be.visible' ); 
+  cy.get( 'div.theater-container' ).should( 'not.exist' );
+} );
+
+
+
+//OBS!!!!!!
+// Don't forget to cancel seats booked during testing. 
+// Go to the https://filmvisarna-team5.nodehill.se/
+// Log in with the email test.yev@gmail.com and the password Test1234! 
+   
+
+    
