@@ -31,9 +31,9 @@ and can give the booking number to the cinema during my visit.
     When I choose a movie "Pulp Fiction" from the list
     And I select the first available time from the list
     And I press on the button "Gå vidare" in the date box
-    And I choose "1" "Vuxen" seats
+    And I choose "3" "Vuxen" seats
     And I press on the button "Gå vidare" in the number of seats box
-    And I choose "1" available seat
+    And I choose "3" available seat
     And I press on the button "Gå vidare" in the seats box
     When I enter my email "test1234567890@gmail.com" in the input field in the confirmation box
     And I press on the button "Boka"
