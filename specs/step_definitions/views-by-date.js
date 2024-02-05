@@ -11,6 +11,10 @@ When('I click the {string} in the calendar', (date) => {
   cy.get('.filterScreenings').type(date).trigger('input');
 });
 
-Then('I expect the {string} of the movie list to be updated', (date) => {
-  cy.get('.filterScreenings').type(date).should('exist')
+When('the choice of movie list is updated and I choose the first element', () => {
+  cy.get('.screeningContainer').should('exist')
+});
+
+Then('I expect a button to apper to continue to the starting point for making a booking', () => {
+  cy.get('.screeningsBtn').should('exist')
 });
