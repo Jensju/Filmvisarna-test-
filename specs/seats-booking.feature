@@ -5,7 +5,7 @@ Feature: Seats booking
   Background: starting booking
     Given that I am on the start page
 
-    
+
 
   Scenario: Booking of available seats
     Given I select the first available screening from the list
@@ -52,3 +52,28 @@ Feature: Seats booking
     Then the system displays a message that email is incorrect "Vänligen ange en giltig email"
     And I should not receive a request for a booking confirmation
   
+  Scenario: Booking less than one seat
+    Given I select the first available screening from the list
+    And I select the first available time from the list
+    And I press on the button "Gå vidare" in the date box
+    When I click on "-" to select less than 1 "Vuxen" seat
+    Then I do not go to the next stage of the booking when I click the submit button "Gå vidare"
+    
+  Scenario: Booking more seats than there are in the cinema hall
+    Given I select the first available screening from the list
+    And I select the first available time from the list
+    And I press on the button "Gå vidare" in the date box
+    When And I choose "1" "Vuxen" seats
+    And I press on the button "Gå vidare" in the number of seats box
+    And I check how many seats the cinema has and go back to select one more "Vuxen" seat
+    Then I do not go to the next stage of the booking when I click the submit button "Gå vidare"
+
+
+  Scenario: Booking more seats than are available in the cinema hall
+    Given I select the first available screening from the list
+    And I select the first available time from the list
+    And I press on the button "Gå vidare" in the date box
+    When And I choose "1" "Vuxen" seats
+    And I press on the button "Gå vidare" in the number of seats box
+    And I check how many available seats the cinema has and go back to select one more "Vuxen" seat
+    Then I do not go to the next stage of the booking when I click the submit button "Gå vidare"
