@@ -65,16 +65,6 @@ Vi testar följande features:
   - logga in;
   - logga ut korrekt;
 
-* Berätta om feature B
-  * Eventuellt beskriv scenarier kortfattat.
-* Berätta om feature C
-  * Eventuellt beskriv scenarier kortfattat.
-
-+ Filtering views by date
-  + kontrollerar att 
-+ reset button,  
-+ länkarna till trejler. 
-
 * Feature: Check linked trailers
   * Testet kontrollerar att man kan förhandstitta på en youtube-trailer 
   - genoml att "klicka" på en filmaffisch
@@ -93,6 +83,11 @@ Vi testar följande features:
   - Bekräftar det nya datumet
   - klickar på resetknappen
   - Återställer kalenderdatumet till default-datum
+
+  * Berätta om feature B
+  * Eventuellt beskriv scenarier kortfattat.
+* Berätta om feature C
+  * Eventuellt beskriv scenarier kortfattat.
 
  ### Vad visar testerna på - finns det buggar/fel i produkten? 
  De flesta scenarier går igenom utan fel, dock visar följande scenarier på buggar/fel i produkten.
