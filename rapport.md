@@ -73,7 +73,7 @@ Vi testar följande features:
  - Användare får välja fler platser/tillgängliga platser än finns och får inget alert meddelande eller liknande som förhindrar att gå till nästa steg i bokningen. 
  - Om användare väljer en film från PDP (detaljsida) då filtreras inte visningar efter datum och det går att boka platser på en visning som har redan gått. 
  I scenarier som går igenom utan fel upptäckte vi ett brist i programmet. Ex: i en scenario där inloggad användare bokar plats och ange någons mejl ser inte användare den bokningsbekräftelse i sina aktiva bokningar. Och till och med användare vems mejl angets vid bokningen ser inte den bokningsbekräftelse hellre i sina bokningar, hen får bara bekräftelse på sitt mejl. Och ingen av de tva användare kan avboka de platserna som varit bokade.
-I scenarier för account creation så finns det en bugg/feature:
+*I scenarier för account creation så finns det en bugg/feature:
 - man måste manuellt gå in och ändra den inmatade mejlen efter varje lyckad körning då man kan inte använda samma mejl flera gånger för att skapa ett konto
  * Scenariobeskrivning... samt vilken fel bugg
 * Eventuellt beskriv scenarier kortfattat.
