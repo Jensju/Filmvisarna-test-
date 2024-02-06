@@ -1,1 +1,2 @@
-AccidentByDragon = Karl Loe
+AccidentByDragon = Karl Loe 
+YevShch = Yevheniia Shcherbakova
