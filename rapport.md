@@ -1,6 +1,6 @@
 ### Vilka är vi?
-*AccidentByDragon = Karl Loe;
-*YevShch = Yevheniia Shcherbakova
+* AccidentByDragon = Karl Loe
+- YevShch = Yevheniia Shcherbakova
 ### Vad testar vi?
 Vi testar följande features:
 * Feature: Seats booking
