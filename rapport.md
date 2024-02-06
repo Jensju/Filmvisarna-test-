@@ -75,6 +75,25 @@ Vi testar följande features:
 + reset button,  
 + länkarna till trejler. 
 
+* Feature: Check linked trailers
+  * Testet kontrollerar att man kan förhandstitta på en youtube-trailer 
+  - genoml att "klicka" på en filmaffisch
+  - navigera till trailer-fönstret
+  - kontrollera att man får tag i starsekvensen
+
+* Feature: Filtering of views by date
+  * Välja specifikt datum för filmlistning.
+  - välja önskat datum i kalendern
+  - ta tag i första film i listan
+  - navigera till första steget för biljettbokning
+
+* Feature: Reset the filering of views by date
+  * Kontrollerar att ett ändrat datum återställs med reset-knappen
+  - Ändrar default-datum till ett senare datum
+  - Bekräftar det nya datumet
+  - klickar på resetknappen
+  - Återställer kalenderdatumet till default-datum
+
  ### Vad visar testerna på - finns det buggar/fel i produkten? 
  De flesta scenarier går igenom utan fel, dock visar följande scenarier på buggar/fel i produkten.
  Vissa scenarier visar att det finns buggar.
