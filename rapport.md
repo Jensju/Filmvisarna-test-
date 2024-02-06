@@ -2,6 +2,9 @@
 * AccidentByDragon = Karl Loe
 - YevShch = Yevheniia Shcherbakova
 - Nebshi = Neby Adhane
++ Jensju = Jens Sjunnesson
+
+- Nebshi = Neby Adhane
 ### Vad testar vi?
 Vi testar följande features:
 * Feature: Seats booking
@@ -64,7 +67,7 @@ Vi testar följande features:
   - logga in;
   - logga ut korrekt;
 
-* Feature: Contact page
+ * Feature: Contact page
  - Testar att kontaktformuläret är interaktivt och tillåter inmatning i alla fält.
 
  * Feature: Find us page
@@ -78,6 +81,7 @@ Vi testar följande features:
 * Berätta om feature C
   * Eventuellt beskriv scenarier kortfattat.
 
+
  ### Vad visar testerna på - finns det buggar/fel i produkten? 
  De flesta scenarier går igenom utan fel, dock visar följande scenarier på buggar/fel i produkten.
  Vissa scenarier visar att det finns buggar.
@@ -90,6 +94,8 @@ Vi testar följande features:
 I scenarier för account creation finns det en bugg i featuren:
 - man måste manuellt gå in och ändra den inmatade mejl-adressen efter varje lyckad körning, då man inte kan använda samma mejl flera gånger för att skapa ett konto.
 
+I scenarier för Seats booking går det att maximalt att boka så många platser som följer fram till nästkommande reda bokade stol. Det går alltså inte att boka för exempelvis sex personer vid samma bokningstillfälle om det max finns fem stolar sammanhållet i en följd, även om det finns fler lediga platser i salongen. Då måste det göras en extra bokning.
+
 Scenariobeskrivning... samt vilken fel bugg
 * Eventuellt beskriv scenarier kortfattat.
 
@@ -98,8 +104,16 @@ Scenariobeskrivning... samt vilken fel bugg
   * Vi hade velat lägga till följande scenario: användaren kan gå ett/flera steg tillbaka i bokningen för att ändra bokningsdetaljer som film, visningstid, antal platser/kategorier därför att det är viktig för smidig bokning. 
   * Under feature "Booking confirmation":
   * Vi hade velat lägga till följande scenario: att inloggad användare bokar plats men anger ett mejl från ett annat konto och sedan kontrollerar vilken användare som har bokningsbekräftelsen på sitt konto. Därför att det är viktig att kunna avboka platser. 
++ Vi hade velat testa "Age limit booking": 
+  + Det finns ingen begränsning för att boka biljett till filmer med åldersgräns utan det går utmärkt att boka barnbiljett till dessa visningar.
+
+ 
   
 * Under feature A:
   * Vi hade velat lägga till följande scenario... därför att.
 * Under feature B:
   * Vi hade velat lägga till följande scenario... därför att.
+
+
+
+
