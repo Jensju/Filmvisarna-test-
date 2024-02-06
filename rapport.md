@@ -30,38 +30,38 @@ Vi testar följande features:
 
  *Feature: Navigera till account creation
  * här kollar testerna om man kan:
-  -hitta till en sida att skapa konto från
+  - hitta till en sida att skapa konto från;
    
  *Feature: Check Bookings
  * här kollar testerna om man kan:
-  -logga in
-  -kolla sina inloggade bokningar
+  - logga in;
+  - kolla sina inloggade bokningar;
    
   *Feature: Create Account
  * här kollar testerna om man kan:
-  -navigera till account creation
-  -skapa ett konto med ett oanvänd mejl
+  - navigera till account creation;
+  - skapa ett konto med ett oanvänd mejl;
    
 *Feature: Create account negative
  * här kollar testerna om man kan:
-  -navigera till account creation
-  -hindras från att skapa ett konto med en tidigare använd mejl
+  - navigera till account creation;
+  - hindras från att skapa ett konto med en tidigare använd mejl;
 
 *Feature: Login
  * här kollar testerna om man kan:
-  -navigera till inloggning
-  -logga in om man har rätt konto uppgifter
+  - navigera till inloggning;
+  - logga in om man har rätt konto uppgifter;
 
 *Feature: Login Negative
  * här kollar testerna om man kan:
-  -navigera till inloggning
-  -hindras från att logga in om man har fel uppgifter
+  - navigera till inloggning;
+  - hindras från att logga in om man har fel uppgifter;
 
 *Feature: Log out
  * här kollar testerna om man kan:
-  -navigera till inloggning
-  -logga in
-  -logga ut korrekt
+  - navigera till inloggning;
+  - logga in;
+  - logga ut korrekt;
 
 * Berätta om feature B
   * Eventuellt beskriv scenarier kortfattat.
