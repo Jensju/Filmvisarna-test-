@@ -1,3 +1,6 @@
+### Vilka är vi?
+* AccidentByDragon = Karl Loe
+- YevShch = Yevheniia Shcherbakova
 ### Vad testar vi?
 Vi testar följande features:
 *Feature: Seats booking
@@ -26,36 +29,36 @@ Vi testar följande features:
   - att bokningen av antal platser filtreras efter antal tillgängliga platser och att man kan välja fler platser/tillgängliga platser än det finns i salongen.
 
  *Feature: Navigera till account creation
- * här kontrollerar testerna om man kan:
-  -hitta till en sida där man kan skapa ett konto
+ * här kollar testerna om man kan:
+  -hitta till en sida att skapa konto från
    
  *Feature: Check Bookings
- * här kontrollerar testerna om man kan:
+ * här kollar testerna om man kan:
   -logga in
-  -se sina inloggade bokningar
+  -kolla sina inloggade bokningar
    
-*Feature: Create Account
-  * här checkar testerna om man kan:
-  -navigera till "account creation"
-  -skapa ett konto med en oanvänd mejl-adress
+  *Feature: Create Account
+ * här kollar testerna om man kan:
+  -navigera till account creation
+  -skapa ett konto med ett oanvänd mejl
    
 *Feature: Create account negative
- * här undersöker testerna om man kan:
+ * här kollar testerna om man kan:
   -navigera till account creation
   -hindras från att skapa ett konto med en tidigare använd mejl
 
 *Feature: Login
- * här kontrollerar testerna om man kan:
+ * här kollar testerna om man kan:
   -navigera till inloggning
-  -loggar in om man har rätt konto uppgifter
+  -logga in om man har rätt konto uppgifter
 
 *Feature: Login Negative
- * här kontrollerar testerna om man kan:
+ * här kollar testerna om man kan:
   -navigera till inloggning
   -hindras från att logga in om man har fel uppgifter
 
 *Feature: Log out
- * här kontrollerar testerna om man kan:
+ * här kollar testerna om man kan:
   -navigera till inloggning
   -logga in
   -logga ut korrekt
