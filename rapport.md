@@ -1,6 +1,7 @@
 ### Vilka är vi?
 * AccidentByDragon = Karl Loe
 - YevShch = Yevheniia Shcherbakova
+- Nebshi = Neby Adhane
 ### Vad testar vi?
 Vi testar följande features:
 *Feature: Seats booking
