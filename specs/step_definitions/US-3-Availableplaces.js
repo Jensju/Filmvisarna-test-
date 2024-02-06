@@ -9,7 +9,6 @@ Given('user selects {string} and {string} and then clicks on the button {string}
   // TODO: implement step
   cy.wait(4000);
   cy.get(':nth-child(1) > .movieImages').first().click({force: true});
-  //cy.get(':nth-child(1) > .screeningContainer > .screeningsBtn');
   cy.get(':nth-child(2) > .custom-radio-button').click({force: true} );
   cy.get('.screening-list > .confirm-button').click({force: true} );
 });
@@ -17,7 +16,6 @@ Given('user selects {string} and {string} and then clicks on the button {string}
 Then('the user selects the {string} and {string} and clicks on the button {string}', (a, b, c) => {
   // TODO: implement step
   cy.get(':nth-child(1) > .counter-container > :nth-child(3)').click({force: true});
-  //cy.get('.ticket-list-item .button-container').last().find('button').last().click()
   cy.get('.price-component > .confirm-button').click({force: true});
 });
 
