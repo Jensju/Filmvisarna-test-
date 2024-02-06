@@ -95,7 +95,7 @@ Vi testar följande features:
   - klickar på resetknappen
   - Återställer kalenderdatumet till default-datum
 
-  * Berätta om feature B
+* Berätta om feature B
   * Eventuellt beskriv scenarier kortfattat.
 * Berätta om feature C
   * Eventuellt beskriv scenarier kortfattat.
