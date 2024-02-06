@@ -1,5 +1,4 @@
 Feature: See reserved seats live 
-  As a visitor, I want to be able to see reserved seats live after clicking planned day's movie
 
 As a visitor, I want to see live/directly on the screen when seats are booked, 
 when I'm selecting seats at a screening so I don't think I can still book something someone else has already booked.
@@ -20,4 +19,4 @@ when I'm selecting seats at a screening so I don't think I can still book someth
 
   Scenario: Navigate Back to Home Page
     Then the user click on the "Back" button or a smilar navigation element.
-    Then the user should be redirected back to the home page.
+    Then the user should be redirected back to the main page.
