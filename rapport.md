@@ -70,6 +70,10 @@ Vi testar följande features:
 * Berätta om feature C
   * Eventuellt beskriv scenarier kortfattat.
 
++ Filtering views by date
+  + kontrollerar att 
++ reset button,  
++ länkarna till trejler. 
 
  ### Vad visar testerna på - finns det buggar/fel i produkten? 
  De flesta scenarier går igenom utan fel, dock visar följande scenarier på buggar/fel i produkten.
@@ -95,6 +99,8 @@ Scenariobeskrivning... samt vilken fel bugg
   * Vi hade velat lägga till följande scenario: att inloggad användare bokar plats men anger ett mejl från ett annat konto och sedan kontrollerar vilken användare som har bokningsbekräftelsen på sitt konto. Därför att det är viktig att kunna avboka platser. 
 + Vi hade velat testa "Age limit booking": 
   + Det finns ingen begränsning för att boka biljett till filmer med åldersgräns utan det går utmärkt att boka barnbiljett till dessa visningar.
+
++ Vi hade också tänkt ha en Feature för: Filtering movies by age limit, men dessvärre fanns det ingen sådan funktion på siten.
 
  
   
