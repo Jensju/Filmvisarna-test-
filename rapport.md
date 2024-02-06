@@ -2,9 +2,9 @@
 * AccidentByDragon = Karl Loe
 - YevShch = Yevheniia Shcherbakova
 - Nebshi = Neby Adhane
-+ Jensju = Jens Sjunnesson
-
+- Jensju = Jens Sjunnesson
 - Nebshi = Neby Adhane
+
 ### Vad testar vi?
 Vi testar följande features:
 * Feature: Seats booking
