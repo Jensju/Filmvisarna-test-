@@ -25,6 +25,41 @@ Vi testar följande features:
   - att lista med visnigar filtreras efter vald datum; 
   - att bokningen av antal platser filtreras efter antal tillgängliga platser och det går inte att välja fler platser/tillgängliga platser än finns i salongen.
 
+ *Feature: Navigera till account creation
+ * här kollar testerna om man kan:
+  -hitta till en sida att skapa konto från
+   
+ *Feature: Check Bookings
+ * här kollar testerna om man kan:
+  -logga in
+  -kolla sina inloggade bokningar
+   
+  *Feature: Create Account
+ * här kollar testerna om man kan:
+  -navigera till account creation
+  -skapa ett konto med ett oanvänd mejl
+   
+*Feature: Create account negative
+ * här kollar testerna om man kan:
+  -navigera till account creation
+  -hindras från att skapa ett konto med en tidigare använd mejl
+
+*Feature: Login
+ * här kollar testerna om man kan:
+  -navigera till inloggning
+  -logga in om man har rätt konto uppgifter
+
+*Feature: Login Negative
+ * här kollar testerna om man kan:
+  -navigera till inloggning
+  -hindras från att logga in om man har fel uppgifter
+
+*Feature: Log out
+ * här kollar testerna om man kan:
+  -navigera till inloggning
+  -logga in
+  -logga ut korrekt
+
 * Berätta om feature B
   * Eventuellt beskriv scenarier kortfattat.
 * Berätta om feature C
@@ -37,7 +72,9 @@ Vi testar följande features:
  I scenarier som gäller filtrering finns flera buggar: 
  - Användare får välja fler platser/tillgängliga platser än finns och får inget alert meddelande eller liknande som förhindrar att gå till nästa steg i bokningen. 
  - Om användare väljer en film från PDP (detaljsida) då filtreras inte visningar efter datum och det går att boka platser på en visning som har redan gått. 
- I scenarier som går igenom utan fel upptäckte vi ett brist i programmet. Ex: i en scenario där inloggad användare bokar plats och ange någons mejl ser inte användare den bokningsbekräftelse i sina aktiva bokningar. Och till och med användare vems mejl angets vid bokningen ser inte den bokningsbekräftelse hellre i sina bokningar, hen får bara bekräftelse på sitt mejl. Och ingen av de tva användare kan avboka de platserna som varit bokade.  
+ I scenarier som går igenom utan fel upptäckte vi ett brist i programmet. Ex: i en scenario där inloggad användare bokar plats och ange någons mejl ser inte användare den bokningsbekräftelse i sina aktiva bokningar. Och till och med användare vems mejl angets vid bokningen ser inte den bokningsbekräftelse hellre i sina bokningar, hen får bara bekräftelse på sitt mejl. Och ingen av de tva användare kan avboka de platserna som varit bokade.
+I scenarier för account creation så finns det en bugg/feature:
+- man måste manuellt gå in och ändra den inmatade mejlen efter varje lyckad körning då man kan inte använda samma mejl flera gånger för att skapa ett konto
  * Scenariobeskrivning... samt vilken fel bugg
 * Eventuellt beskriv scenarier kortfattat.
 
