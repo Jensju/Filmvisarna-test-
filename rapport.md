@@ -77,7 +77,7 @@ Vi testar följande features:
 I scenarier för account creation så finns det en bugg/feature:
 - man måste manuellt gå in och ändra den inmatade mejlen efter varje lyckad körning då man kan inte använda samma mejl flera gånger för att skapa ett konto
 
-* Scenariobeskrivning... samt vilken fel bugg
+Scenariobeskrivning... samt vilken fel bugg
 * Eventuellt beskriv scenarier kortfattat.
 
 ### Saker vi inte hunnit testa
