@@ -88,7 +88,7 @@ Vi testar följande features:
   - ta tag i första film i listan
   - navigera till första steget för biljettbokning
 
-* Feature: Reset the filering of views by date
+* Feature: Reset the filtering of views by date
   * Kontrollerar att ett ändrat datum återställs med reset-knappen
   - Ändrar default-datum till ett senare datum
   - Bekräftar det nya datumet
