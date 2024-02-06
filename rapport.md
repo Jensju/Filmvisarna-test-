@@ -1,6 +1,7 @@
 ### Vilka är vi?
 * AccidentByDragon = Karl Loe
 - YevShch = Yevheniia Shcherbakova
+- Nebshi = Neby Adhane
 ### Vad testar vi?
 Vi testar följande features:
 * Feature: Seats booking
@@ -63,6 +64,14 @@ Vi testar följande features:
   - logga in;
   - logga ut korrekt;
 
+* Feature: Contact page
+ - Testar att kontaktformuläret är interaktivt och tillåter inmatning i alla fält.
+
+ * Feature: Find us page
+  - Testar att en "hitta hit" sektion med adressuppgifter och eventuellt en karta finns i sidfoten på hemsidan. 
+
+  * Feature: Check unique URL/Route
+   - Testar att varje sida på webbplatsen har en unik URL som ändras när användaren navigerar via länkar.
 
 * Berätta om feature B
   * Eventuellt beskriv scenarier kortfattat.
