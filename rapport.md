@@ -57,11 +57,12 @@ Vi testar följande features:
   - navigera till inloggning;
   - hindras från att logga in om man har fel uppgifter;
 
-*Feature: Log out
+* Feature: Log out
  * här kollar testerna om man kan:
   - navigera till inloggning;
   - logga in;
   - logga ut korrekt;
+
 
 * Berätta om feature B
   * Eventuellt beskriv scenarier kortfattat.
