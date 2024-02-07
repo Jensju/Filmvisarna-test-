@@ -1,9 +1,9 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-Given('the user is on the websites home page', () => {
-  // TODO: implement step
-  cy.visit('https://filmvisarna-team5.nodehill.se/');
-});
+// Given('the user is on the websites home page', () => {
+//   // TODO: implement step
+//   cy.visit('https://filmvisarna-team5.nodehill.se/');
+// });
 
 Given('user selects {string} and {string} and then clicks on the button {string}', (a, b, c) => {
   // TODO: implement step

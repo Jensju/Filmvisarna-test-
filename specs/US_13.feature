@@ -6,8 +6,8 @@ Feature: View of movie trailers
 
   Scenario Outline: View Movie Trailers
     When the user clicks to time of the "<movie>"
-    And the trailer of the movies can be visable
-    And the user clicks on the "Back" button or a similar navigation element
+    Then the trailer of the movies can be visable
+   
 
     Examples:
       | movie |

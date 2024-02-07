@@ -3,7 +3,7 @@ Feature: Check available places
     viewing so that I can determine if there are seats left that are interesting to me.
 
     Background: 
-    Given the user is on the websites home page
+    Given the user is on the home page
     And  user selects "Sample Movie" and "show time" and then clicks on the button "Gå vidare"
 
     Scenario: the user selects a "Sample Movie" and a movie showtime.

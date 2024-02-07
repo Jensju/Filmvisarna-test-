@@ -4,7 +4,7 @@ Feature: Movie Details Page
 
 
    Scenario Outline: View Movie Information
-    Given The user is on the websites home page
+    Given the user is on the home page
     And  The user click on the movie titled "<movie>"
     Then The user should be directed to the movie details page
     When The user look at the page content

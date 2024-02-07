@@ -1,9 +1,9 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 
-Given('the user is on the home page', () => {
-  cy.visit('https://filmvisarna-team5.nodehill.se/');
-});
+// Given('the user is on the home page', () => {
+//   cy.visit('https://filmvisarna-team5.nodehill.se/');
+// });
 
 When('the user scrolls to the footer section', () => {
   // TODO: implement step

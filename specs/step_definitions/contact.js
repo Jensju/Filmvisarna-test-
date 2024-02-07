@@ -3,7 +3,7 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 //Opens the homepage and sets the browser viewport to 1680x1050
 Given('the user is on the home page', () => {
   cy.visit('/');
-  cy.viewport(1680, 1050);
+  cy.viewport(1680, 2100);
 });
 
 //Simulates a click on a link in the footer to navigate to the specified page.
