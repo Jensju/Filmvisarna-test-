@@ -4,15 +4,17 @@ Feature: Check available places
 
     Background: 
     Given the user is on the home page
-    And  user selects "Sample Movie" and "show time" and then clicks on the button "Gå vidare"
+    
 
     Scenario: the user selects a "Sample Movie" and a movie showtime.
-    Then the user selects the "Biljettyp" and "antal" and clicks on the button "Gå vidare"
-    Then the system displays the available "Ledig plats" for the selected showtime.
+    When  user selects "Sample Movie" and "show time" and then clicks on the button "Gå vidare"
+    And the user selects the "Biljettyp" and "antal" and clicks on the button "Gå vidare"
+    And the system displays the available "Ledig plats" for the selected showtime.
     And  the user clicks on one of the "Ledig plats".
-    And  the user verify that "Ledig plats" are visible.
+    Then  the user verify that "Ledig plats" are visible.
 
     Scenario: the user selects a "Sample Movie" and showtime, but all seats are occupied.
-    Then the user selects the "Biljettyp" and "antal" and clicks on the button "Gå vidare". 
-    Then the system notifies that all seats are "Upptagen plats".
-    And  the user verify that no seats are visible.
+    When the user selects sample movie and show time and then clicks on the submit button
+    And the user selects the "Biljettyp" and "antal" and clicks on the button "Gå vidare". 
+    And the system notifies that all seats are "Upptagen plats".
+    Then the user verify that no seats are visible.

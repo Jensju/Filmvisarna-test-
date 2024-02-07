@@ -116,8 +116,8 @@ Then( 'I do not go to the next stage of the booking when I click the submit butt
   cy.get( 'div.price-component' )
     .contains( buttonName )
     .click()
-  // cy.get( 'div.theater-container' ).should( 'not.be.visible' ); 
-  cy.get( 'div.theater-container' ).should( 'not.exist' );
+  cy.get( 'div.theater-container' ).should( 'not.be.visible' ); 
+  // cy.get( 'div.theater-container' ).should( 'not.exist' );
 } );
 
 

@@ -7,7 +7,6 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 Given('user selects {string} and {string} and then clicks on the button {string}', (a, b, c) => {
   // TODO: implement step
-  cy.wait(4000);
   cy.get(':nth-child(1) > .movieImages').first().click({force: true});
   cy.get(':nth-child(2) > .custom-radio-button').click({force: true} );
   cy.get('.screening-list > .confirm-button').click({force: true} );
@@ -34,7 +33,7 @@ Then('the user clicks on one of the {string}.', (a) => {
 Then('the user verify that {string} are visible.', (a) => {
   // TODO: implement step
   cy.get('.theater-container > :nth-child(2) > :nth-child(3)');
-  cy.screenshot('.theater-container > :nth-child(2) > :nth-child(3)');
+  // cy.screenshot('.theater-container > :nth-child(2) > :nth-child(3)');
 });
 
 Then('the user selects the {string} and {string} and clicks on the button {string}.', (a, b, c) => {
@@ -52,3 +51,11 @@ Then('the user verify that no seats are visible.', () => {
   // TODO: implement step
   cy.get('.seats-explained > :nth-child(3)').should('be.visible');
 });
+
+When( 'the user selects sample movie and show time and then clicks on the submit button', () => {
+  // TODO: implement step
+  cy.get( ':nth-child(9) > .movieImages' ).click();
+  cy.get( ':nth-child(5) > .custom-radio-button' ).click();
+  cy.get( '.screening-list > .confirm-button' ).click();
+} );
+
