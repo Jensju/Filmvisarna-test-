@@ -4,6 +4,8 @@
 - Nebshi = Neby Adhane
 - Jensju = Jens Sjunnesson
 - Nebshi = Neby Adhane
+- Esra   = Esra Unal
+- Gursell = Gursel Unal
 
 ### Vad testar vi?
 Vi testar följande features:
@@ -94,6 +96,12 @@ Vi testar följande features:
   - Bekräftar det nya datumet
   - klickar på resetknappen
   - Återställer kalenderdatumet till default-datum
+  
+* Feature : Testet kontrollerar om du kan se detaljerna i en film (bild, trailer, beskrivning, skådespelare, regissör etc).
+
+* Feature : Testet kontrollerar om du kan se de ledig platserna i hallen.
+
+* Feature :Testet kontrollerar synligheten för Om oss-sidan.
 
 * Berätta om feature B
   * Eventuellt beskriv scenarier kortfattat.
