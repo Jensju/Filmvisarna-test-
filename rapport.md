@@ -34,11 +34,11 @@ Vi testar följande features:
   - att lista med visningar filtreras efter valt datum; 
   - att bokningen av antal platser filtreras efter antal tillgängliga platser och det går inte att välja fler platser/tillgängliga platser än det finns i salongen.
 
- * Feature: Navigera till account creation
+* Feature: Navigera till account creation
   * här checkar testerna om man kan:
   - hitta till en sida att skapa ett konto från;
    
- * Feature: Check Bookings
+* Feature: Check Bookings
   * här kontrollerar testerna om man kan:
   - logga in;
   - checka sina gjorda bokningar;
