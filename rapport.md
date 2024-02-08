@@ -125,24 +125,28 @@ Vi testar följande features:
 
  ### Vad visar testerna på - finns det buggar/fel i produkten? 
  De flesta scenarier går igenom utan fel, dock visar följande scenarier på buggar/fel i produkten.
- Vissa scenarier visar att det finns buggar.
- Scenario där man anger inkorrekt mejl i slutet av bokningen visar att det går, i ett fall av fyra som testades, att boka biljetter med ett mejl i fel format ("test@"). 
- I scenarier som gäller filtrering finns flera buggar: 
- - Användare får välja fler platser/tillgängliga platser än det finns i salongen och får inget alert-meddelande eller liknande som förhindrar att gå vidare till nästa steg i bokningen. 
- - Om användare väljer en film från PDP (detaljsida) då filtreras inte visningar efter datum och det går att boka platser på en visning som redan har spelats. 
- I scenarier som går igenom utan fel upptäckte vi en brist i programmet. Ex: I ett scenario där en inloggad användare bokar plats och anger någon annans mej-adress, kommer denne inte att se bokningsbekräftelsen i sina aktiva bokningar. Även när användare angivit sin egen mejl-adress vid bokning syns ändå inte bokningsbekräftelsen i bokningar, hen får bara en bekräftelse på sitt mejl. Och ingen av de två användare kan avboka de platser som bokats.
+ Scenario där man matar in inkorrekt mejladress i slutet av bokningen visar att det tillåter inmattning av mejladres i fel format (exempel med mejladress - "test@"). 
+ I scenarier som gäller filter feature finns flera buggar: 
+ - Användare får välja fler platser/tillgängliga platser än det finns i salongen och får inget alert-meddelande eller liknande som förhindrar att gå till nästa steg i bokningen. 
+ - När användare väljer en film från PDP (detaljsida) filtreras inte visningar i en visningslista efter datum och det är tillåtet att boka platser på en visning som redan har spelats. 
+ I scenarier som går igenom utan fel upptäckte vi en brist i programmet. Ex: I ett scenario där en inloggad användare bokar plats och anger någon annans mejl-adress, kommer denne inte att se bokningsbekräftelsen i sina aktiva bokningar på sitt konto. Och även den användare vars mejladress angavs kommer inte att få bekräftelse på sitt konto (om hen har ett konto). Hen får bara en bekräftelse på sitt mejl. Och ingen av de två användare kan avboka de platser som bokats.
+
 
 I scenarier för account creation finns det en bugg i featuren:
 - man måste manuellt gå in och ändra den inmatade mejl-adressen efter varje lyckad körning, då man inte kan använda samma mejl flera gånger för att skapa ett konto.
 
 I scenarier för Seats booking går det att maximalt att boka så många platser som följer fram till nästkommande reda bokade stol. Det går alltså inte att boka för exempelvis sex personer vid samma bokningstillfälle om det max finns fem stolar sammanhållet i en följd, även om det finns fler lediga platser i salongen. Då måste det göras en extra bokning.
 
+Buggar som hittades under testning, men som inte är kopplade till någon feature:
+1.Sidan krashar om man är inloggad längre än en timme (det verkar att den bugg påverkar testning i cypress när man kör flera tester med inlogningen i samma feature fil. Cypress ger eror 200 och kan inte ladda ner hemsidan och fortsätta testning ) 
+
+
 Scenariobeskrivning... samt vilken fel bugg
 * Eventuellt beskriv scenarier kortfattat.
 
 ### Saker vi inte hunnit testa
 * Under feature "Seats booking":
-  * Vi hade velat lägga till följande scenario: användaren kan gå ett/flera steg tillbaka i bokningen för att ändra bokningsdetaljer som film, visningstid, antal platser/kategorier därför att det är viktig för smidig bokning. 
+  * Vi hade velat lägga till följande scenario: användaren kan gå ett/flera steg tillbaka i bokningen för att ändra bokningsdetaljer som film, visningstid, antal platser/kategorier därför att det är viktig för smidig bokning. Även lägga til scenario där användare laddar om sidan mitt i bokningen. 
   * Under feature "Booking confirmation":
   * Vi hade velat lägga till följande scenario: att inloggad användare bokar plats men anger ett mejl från ett annat konto och sedan kontrollerar vilken användare som har bokningsbekräftelsen på sitt konto. Därför att det är viktig att kunna avboka platser. 
 + Vi hade velat testa "Age limit booking": 
@@ -150,12 +154,14 @@ Scenariobeskrivning... samt vilken fel bugg
 
 + Vi hade också tänkt ha en Feature för: Filtering movies by age limit, men dessvärre fanns det ingen sådan funktion på siten.
 
+* Vi hade velat också att lägga till scenarier med navigering.
+- kontrolera att det är möjligt att gå tillbaka från olika sidor av sajten till startsidan. 
+- kontrolera att det är lätt att hitta från olika sidor av sajten till bokningsida, lista av visningar o s v. 
  
   
 * Under feature A:
   * Vi hade velat lägga till följande scenario... därför att.
-* Under feature B:
-  * Vi hade velat lägga till följande scenario... därför att.
+
 
 
 
