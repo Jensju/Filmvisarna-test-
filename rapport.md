@@ -97,11 +97,26 @@ Vi testar följande features:
   - klickar på resetknappen
   - Återställer kalenderdatumet till default-datum
   
-* Feature : Testet kontrollerar om du kan se detaljerna i en film (bild, trailer, beskrivning, skådespelare, regissör etc).
+* Feature : Testet kontrollerar om man kan se detaljerna i en film (bild, trailer, beskrivning, skådespelare, regissör etc).
 
-* Feature : Testet kontrollerar om du kan se de ledig platserna i hallen.
+* Feature : Testet kontrollerar om man kan se de ledig platserna i hallen.
 
 * Feature :Testet kontrollerar synligheten för Om oss-sidan.
+
+* Feature: View of movie trailers.
+  -Att klicka på "movies" för att se "trailer".
+  -Att kontollera om man kan se "trailer of movies".
+
+* Feature: See reserved seats live 
+  -Att testa om man kan boka "seats"
+  -Att kontrollera om kan klicka på tiden, datumn och språket av movies.
+  -Att kontollera om relaterade segmenter går vidare.
+  -Att kontollera om man kan inte boka "seats" som har bokat redan.
+
+* Feature: Cancel a booking 
+  -Att kontrollera om man kan logga in
+  -Att gå vidare till bokningsdetaljer efter loggning in
+  -Att avboka en bokning so att man inte tar upp plats för någon annan.
 
 * Berätta om feature B
   * Eventuellt beskriv scenarier kortfattat.
