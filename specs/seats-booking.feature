@@ -62,7 +62,5 @@ Feature: Seats booking
     And I select the first available time from the list
     And I press on the button "Gå vidare" in the date box
     When I click on "-" to select less than 1 "Vuxen" seat
-    Then I do not go to the next stage of the booking when I click the submit button "Gå vidare"
+    Then I can not go to the next stage of the booking when I click the submit button "Gå vidare"
     
-
-  

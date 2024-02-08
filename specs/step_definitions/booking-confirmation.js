@@ -153,6 +153,19 @@ Then('I should not see a confirmation of booking message', () => {
     .should( 'not.be.visible' )
 });
 
+Then( 'I should see a request to confirm booking', () => {
+  // TODO: implement step
+  cy.get( '.modal-header' )
+    .contains( 'Bekräfta bokning' )
+  .should('be.visible')
+} );
+
+Then( 'I log out of my account', () => {
+  // TODO: implement step
+  cy.get( '#basic-nav-dropdown' ).click();
+  cy.get( 'a' ).contains( 'Logga ut' ).click();
+} );
+ 
 
 //OBS!!!!!!
 // Don't forget to cancel seats booked during testing.
