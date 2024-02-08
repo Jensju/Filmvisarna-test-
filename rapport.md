@@ -104,19 +104,19 @@ Vi testar följande features:
 * Feature: Testet kontrollerar synligheten för Om oss-sidan.
 
 * Feature: View of movie trailers.
-  -Att klicka på "movies" för att se "trailer".
-  -Att kontollera om man kan se "trailer of movies".
+  - Att klicka på "movies" för att se "trailer".
+  - Att kontollera om man kan se "trailer of movies".
 
 * Feature: See reserved seats live 
-  -Att testa om man kan boka "seats"
-  -Att kontrollera om kan klicka på tiden, datumn och språket av movies.
-  -Att kontollera om relaterade segmenter går vidare.
-  -Att kontollera om man kan inte boka "seats" som har bokat redan.
+  - Att testa om man kan boka "seats"
+  - Att kontrollera om kan klicka på tiden, datumn och språket av movies.
+  - Att kontollera om relaterade segmenter går vidare.
+  - Att kontollera om man kan inte boka "seats" som har bokat redan.
 
 * Feature: Cancel a booking 
-  -Att kontrollera om man kan logga in
-  -Att gå vidare till bokningsdetaljer efter loggning in
-  -Att avboka en bokning so att man inte tar upp plats för någon annan.
+  - Att kontrollera om man kan logga in
+  - Att gå vidare till bokningsdetaljer efter loggning in
+  - Att avboka en bokning so att man inte tar upp plats för någon annan.
 
 * Berätta om feature B
   * Eventuellt beskriv scenarier kortfattat.
@@ -142,7 +142,7 @@ I scenarier för Seats booking går det maximalt att boka så många platser som
   Exempelvis går det inte att göra en bokning för sex personer vid samma bokningstillfälle om det finns max fem stolar i en följd, även om det finns fler lediga platser i salongen. Det krävs då en extra bokningsprocess.
 
 Buggar som hittades under testning, men som inte är kopplade till någon feature:
-1. Sidan kraschar om man är inloggad längre än en timme (Det verkar som att den buggen påverkar testprocessen i cypress när man kör flera tester med inlogningen i samma feature fil. Cypress ger error 200 och kan inte ladda ner hemsidan för fortsätta tester.) 
+  1. Sidan kraschar om man är inloggad längre än en timme (Det verkar som att den buggen påverkar testprocessen i cypress när man kör flera tester med inlogningen i samma feature fil. Cypress ger error 200 och kan inte ladda ner hemsidan för fortsätta tester.) 
 
 
 Scenariobeskrivning... samt vilken fel bugg
