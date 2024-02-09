@@ -148,7 +148,7 @@ Scenariobeskrivning... samt vilken fel bugg
 #### Test Problem
 
 I scenarier för account creation finns det en bugg/komplicering i featuren:
-  - man måste manuellt gå in och ändra den inmatade mejl-adressen efter varje lyckad körning, då man inte kan använda samma mejl flera gånger för att skapa ett konto.
+  - man måste manuellt gå in och ändra den inmatade mejl-adressen efter varje lyckad körning, då Karl inte hann lägga in en funktion för att radomisera ett mejl varje gång, då man inte kan använda samma mejl flera gånger för att skapa ett konto.
 
 ### Saker vi inte hunnit testa
 * Under feature "Seats booking":
