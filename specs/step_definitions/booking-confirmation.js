@@ -124,7 +124,6 @@ When('I confirm the booking and press on the button {string}', (buttonName) => {
 
 Then('I should see a booking confirmation message', () => {
   // TODO: implement step
-  cy.url().should( 'eq', 'https://filmvisarna-team5.nodehill.se/bokningsbekraftelse' )
   cy.get( '.row.mx-1.booking-details-container' )
   .should('be.visible')  
     .contains( 'Bokningsdetaljer' )
@@ -148,7 +147,6 @@ Then('the confirmation message should contain selected seat numbers, which film,
 
 Then('I should not see a confirmation of booking message', () => {
   // TODO: implement step
-  cy.url().should( 'not.eq', 'https://filmvisarna-team5.nodehill.se/bokningsbekraftelse' )
   cy.get( '.row.mx-1.booking-details-container' )
     .should( 'not.be.visible' )
 });

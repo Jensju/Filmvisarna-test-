@@ -22,7 +22,7 @@ so that I don't waste my time searching for irrelevant screenings
     When I choose "1" "Vuxen" seats
     And I press on the button "Gå vidare" in the number of seats box
     And I check how many seats the cinema has and go back to select one more "Vuxen" seat
-    Then I do not go to the next stage of the booking when I click the submit button "Gå vidare"
+    Then I should not be able to go to the next stage of the booking when I click the submit button "Gå vidare"
 
 
   Scenario: Booking more seats than are available in the cinema hall
@@ -32,4 +32,4 @@ so that I don't waste my time searching for irrelevant screenings
     When I choose "1" "Vuxen" seats
     And I press on the button "Gå vidare" in the number of seats box
     And I check how many available seats the cinema has and go back to select one more "Vuxen" seat
-    Then I do not go to the next stage of the booking when I click the submit button "Gå vidare"
+    Then I should not be able to go to the next stage of the booking when I click the submit button "Gå vidare"

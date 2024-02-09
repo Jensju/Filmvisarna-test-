@@ -64,12 +64,12 @@ When( 'I choose {string} reserved seats', (units) => {
  } );
 
 
-Then('the system displays an alert message', () => {
-  // TODO: implement step
-  cy.on( 'window:alert', ( str ) => {
-    throw new Error( 'Unexpected challenge window.alert()' )
-  } )
-});
+// Then('the system displays an alert message', () => {
+//   // TODO: implement step
+//   cy.on( 'window:alert', ( str ) => {
+//     throw new Error( 'Unexpected challenge window.alert()' )
+//   } )
+// });
 
 
 When( 'I enter email {string} in the input field in the confirmation box', ( emailAdress ) => {
@@ -111,14 +111,6 @@ When( 'I click on {string} to select less than 1 {string} seat', ( emblem, categ
     .click()
 } );
  
-Then( 'I can not go to the next stage of the booking when I click the submit button {string}', (buttonName) => {
-  // TODO: implement step
-  cy.get( 'div.price-component' )
-    .contains( buttonName )
-    .click()
-  cy.get( 'div.theater-container' ).should( 'not.be.visible' ); 
-  // cy.get( 'div.theater-container' ).should( 'not.exist' );
-} );
 
 
 

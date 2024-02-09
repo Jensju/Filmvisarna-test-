@@ -58,6 +58,14 @@ When( 'I check how many available seats the cinema has and go back to select one
   } )
 } ); 
 
+Then( 'I should not be able to go to the next stage of the booking when I click the submit button {string}', ( buttonName ) => {
+  // TODO: implement step
+  cy.get( 'div.price-component' )
+    .contains( buttonName )
+    .click()
+  cy.get( 'div.theater-container' ).should( 'not.be.visible' );
+} );
+
 
 When( 'I am selecting a date one month in advance in the calendar', () => {
   // TODO: implement step
