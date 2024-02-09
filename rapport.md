@@ -135,9 +135,6 @@ I scenarier som gäller filter feature finns flera buggar:
 I scenarier som går igenom utan fel upptäckte vi en brist i programmet. 
   Exempelvis: I ett scenario där en inloggad användare bokar plats och anger någon annans mejl-adress, kommer användaren som gör bokningn inte att se bekräftelsen i sina aktiva bokningar på sitt konto. Inte heller den användare vars mejladress angivits kommer kommer att få bekräftelse till sitt konto (om denne har ett konto vill säga). Hen får bara en bekräftelse på sitt mejl. Och ingen av de två användare kan avboka de platser som bokats.
 
-I scenarier för account creation finns det en bugg i featuren:
-  - man måste manuellt gå in och ändra den inmatade mejl-adressen efter varje lyckad körning, då man inte kan använda samma mejl flera gånger för att skapa ett konto.
-
 I scenarier för Seats booking går det maximalt att boka så många platser som följer fram till nästkommande reda bokade stol. 
   Exempelvis går det inte att göra en bokning för sex personer vid samma bokningstillfälle om det finns max fem stolar i en följd, även om det finns fler lediga platser i salongen. Det krävs då en extra bokningsprocess.
 
@@ -147,6 +144,11 @@ Buggar som hittades under testning, men som inte är kopplade till någon featur
 
 Scenariobeskrivning... samt vilken fel bugg
 * Eventuellt beskriv scenarier kortfattat.
+
+#### Test Problem
+
+I scenarier för account creation finns det en bugg/komplicering i featuren:
+  - man måste manuellt gå in och ändra den inmatade mejl-adressen efter varje lyckad körning, då man inte kan använda samma mejl flera gånger för att skapa ett konto.
 
 ### Saker vi inte hunnit testa
 * Under feature "Seats booking":
