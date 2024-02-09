@@ -163,6 +163,8 @@ Scenariobeskrivning... samt vilken fel bugg
 
 * Vi hade också tänkt ha en Feature för: Filtering movies by age limit, det vill säga filtrara på åldersgräns, men dessvärre finns ingen sådan funktion på sajten.
 
+* Vi hade viljat lägga till en Feature för att kolla Inloggade användares features, men bi upptäckte att det inte fanns några större features för inloggade användare som inte täcktes av andra tester.
+
 * Vi hade också velat lägga till scenarier för navigering.
   - kontrolera att det är möjligt att gå tillbaka från olika sidor av sajten till startsidan. 
   - kontrolera att det är lätt att hitta från olika sidor av sajten till bokningsida, lista av visningar o s v. 
