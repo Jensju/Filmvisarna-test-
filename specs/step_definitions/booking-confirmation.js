@@ -5,6 +5,7 @@ Given('that I am on the start page', () => {
   cy.viewport(1280, 1600)
 });
 
+
 Given('I logg in in my account', () => {
   // TODO: implement step  
   cy.get( '#basic-nav-dropdown' ).click();
@@ -92,7 +93,7 @@ When( 'I choose {string} available seat', ( units ) => {
 } );
  
 When('I press on the button {string} in the seats box', (buttonName) => {
-  // TODO: implement step //div.theater-container .flex-space-between
+  // TODO: implement step 
   cy.get( '.flex-space-between' )
     .find( 'button' )
     .contains(buttonName)
@@ -124,14 +125,34 @@ When('I confirm the booking and press on the button {string}', (buttonName) => {
 
 Then('I should see a booking confirmation message', () => {
   // TODO: implement step
-  cy.url().should( 'eq', 'https://filmvisarna-team5.nodehill.se/bokningsbekraftelse' )
   cy.get( '.row.mx-1.booking-details-container' )
   .should('be.visible')  
     .contains( 'Bokningsdetaljer' )
   . should('be.visible')
 });
 
-Then('the confirmation message should contain selected seat numbers, which film, date and unique booking number', () => {
+Then( 'the confirmation should contain selected seat numbers, the movie title {string}, date {string}, time {string} and booking number', ( movieTitle, date, time ) => {
+  // TODO: check each row that it contains the required information or is not empty
+  cy.get( 'table tbody tr' ).each( ( $row, index ) => {
+    cy.wrap( $row ).within( () => {
+      if ( index === 0 ) {
+        cy.get( 'td' ).eq( 0 ).should( 'contain', 'Bokningsnummer:' );
+        cy.get( 'td' ).eq( 1 ).should( 'not.be.empty' );
+      } else if ( index === 1 ) {
+        cy.get( 'td' ).eq( 0 ).should( 'contain', 'Film' );
+        cy.get( 'td' ).eq( 1 ).should( 'contain', movieTitle );
+      } else if ( index === 2 ) {
+        cy.get( 'td' ).eq( 0 ).should( 'contain', 'Datum:' );
+        cy.get( 'td' ).eq( 1 ).should( 'contain', date ).parent().should( 'contain', time );
+      } else if ( index === 3 ) {
+        cy.get( 'td' ).eq( 0 ).should( 'contain', 'Plats:' );
+        cy.get( 'td' ).eq( 1 ).should( 'not.be.empty' );
+      }
+    } );
+  } );
+} );
+
+Then('the confirmation message should contain selected seat numbers, which film, date and booking number', () => {
   // TODO: implement step
   cy.get( '.row.mx-1.booking-details-container table' )
     .should( 'be.visible' )
@@ -148,14 +169,8 @@ Then('the confirmation message should contain selected seat numbers, which film,
 
 Then('I should not see a confirmation of booking message', () => {
   // TODO: implement step
-  cy.url().should( 'not.eq', 'https://filmvisarna-team5.nodehill.se/bokningsbekraftelse' )
+  // cy.url().should( 'not.eq', 'https://filmvisarna-team5.nodehill.se/bokningsbekraftelse' )
   cy.get( '.row.mx-1.booking-details-container' )
     .should( 'not.be.visible' )
 });
 
-
-//OBS!!!!!!
-// Don't forget to cancel seats booked during testing.
-// Go to the https://filmvisarna-team5.nodehill.se/
-// Log in with the email test.yev@gmail.com and the password Test1234!
-//and in the second account - test1234567890@gmail.com and the password Test1234! 

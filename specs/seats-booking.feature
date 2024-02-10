@@ -2,12 +2,12 @@ Feature: Seats booking
   As a visitor, I want to be able to book seats at a screening 
   so that I know I have the seats I want when I go to see the film.
 
-  Background: starting booking
+  Background: start page
     Given that I am on the start page
 
 
   Scenario: Booking of available seats
-    Given I select the first available screening from the list
+    Given I choose the movie titled "Schindler's List"
     And I select the first available time from the list
     And I press on the button "Gå vidare" in the date box
     When I choose "1" "Vuxen" seats
@@ -18,8 +18,8 @@ Feature: Seats booking
 
 
   Scenario: Booking of already occupied seat is not possible
-    Given I choose the film "Gladiator" in "21:00" on "Söndag, 2024-02-11" from the list of screenings
-    And I select the first available time from the list
+    Given I choose the movie titled "Happy Gilmore"
+    And I choose the session "Måndag, 2024-01-22, 18:00" from the list
     And I press on the button "Gå vidare" in the date box
     And I choose "1" "Vuxen" seats
     And I press on the button "Gå vidare" in the number of seats box
@@ -29,18 +29,18 @@ Feature: Seats booking
     And I press on the button "Boka"
     And I confirm the booking and press on the button "Boka"
     And I go to the start page
-    And I choose the film "Gladiator" in "21:00" on "Söndag, 2024-02-11" from the list of screenings
-    And I select the first available time from the list
+    When I choose the movie titled "Happy Gilmore"
+    And I choose the session "Måndag, 2024-01-22, 18:00" from the list
     And I press on the button "Gå vidare" in the date box
     And I choose "1" "Vuxen" seats
     And I press on the button "Gå vidare" in the number of seats box
     When I choose "1" reserved seats
-    Then I should get an alert message that I need to choose an available seat "Välj säten innan du fortsätter"
+    Then I should get an alert message "Välj säten innan du fortsätter"
 
 
   Scenario Outline: Booking seats is not possible if visitor enter an incorrect email address.
-    When I choose the film "Gladiator" in "21:00" on "Söndag, 2024-02-11" from the list of screenings
-    And I select the first available time from the list
+    When I choose the movie titled "Happy Gilmore"
+    And I choose the session "Måndag, 2024-01-22, 18:00" from the list
     And I press on the button "Gå vidare" in the date box
     And I choose "1" "Vuxen" seats
     And I press on the button "Gå vidare" in the number of seats box
@@ -56,13 +56,14 @@ Feature: Seats booking
       | test@          |
       | test!gmail.com |
       | *****.com      |
+      | c      @com |
 
   Scenario: Booking less than one seat
     Given I select the first available screening from the list
     And I select the first available time from the list
     And I press on the button "Gå vidare" in the date box
     When I click on "-" to select less than 1 "Vuxen" seat
-    Then I do not go to the next stage of the booking when I click the submit button "Gå vidare"
+    Then I should not be able to go to the next stage of the booking when I click the submit button "Gå vidare"
     
 
   

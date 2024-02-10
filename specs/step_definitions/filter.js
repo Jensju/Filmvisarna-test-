@@ -1,6 +1,6 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-When( 'I choose a movie {string} from the list', ( movieName ) => {
+When( 'I choose the movie titled {string}', ( movieName ) => {
   // TODO: implement step
   cy.get( '.movieCard' )
     .contains( movieName )
@@ -62,18 +62,16 @@ When( 'I check how many available seats the cinema has and go back to select one
 When( 'I am selecting a date one month in advance in the calendar', () => {
   // TODO: implement step
   cy.get( '.filterScreenings' )
-    .then( $el => {
       const today = new Date();
       const nextMonth = new Date( today.getFullYear(), today.getMonth() + 1, today.getDate() );
       const nextMonthFormatted = nextMonth.toISOString().slice( 0, 10 );
       cy.log( nextMonthFormatted )
       cy.get( '.filterScreenings' ).type( nextMonthFormatted ).trigger( 'input' );
-    } );
 } );
 
 
-Then( 'screenings that will take place earlier than the selected date should not be displayed for selection', () => {
-  cy.get( '.underline.text-center' ).each( ( $el, index, $list) => {
+Then( 'screenings that will take place earlier than the selected date should not be displayed', () => {
+  cy.get( '.underline.text-center' ).each( ( $el) => {
     const text = $el.text()
     const regex = /(\d{4}-\d{2}-\d{2})/;
     const screeningDate = text.match( regex )[ 1 ];
@@ -86,3 +84,10 @@ Then( 'screenings that will take place earlier than the selected date should not
   } )
 } );
 
+Then( 'I should not be able to go to the next stage of the booking when I click the submit button {string}', ( buttonName ) => {
+  // TODO: implement step
+  cy.get( 'div.price-component' )
+    .contains( buttonName )
+    .click()
+  cy.get( 'div.theater-container' ).should( 'not.be.visible' );
+} );
