@@ -145,6 +145,9 @@ Buggar som hittades under testning (uppfoskningstestning), men som inte är kopp
 I scenarier för account creation finns det en bugg/komplicering i featuren:
   - man måste manuellt gå in och ändra den inmatade mejl-adressen efter varje lyckad körning, då Karl inte hann lägga in en funktion för att radomisera ett mejl varje gång, då man inte kan använda samma mejl flera gånger för att skapa ett konto.
 
+I feater booking confirmation delade vi upp tre scenario i två filer(+ booking confirmation2) för att cypress kunde inte ladda up hemsidan efter fler scenarier med inloggningen. Men den svårigheten ibland kan uppstå endå trots våra åtgärder. 
+
+
 ### Saker vi inte hunnit testa
 * Under feature "Seats booking":
   - Vi hade velat lägga till följande scenario: 
