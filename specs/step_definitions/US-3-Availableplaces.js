@@ -21,7 +21,7 @@ Then('the user selects the {string} and {string} and clicks on the button {strin
 Then('the system displays the available {string} for the selected showtime.', (a) => {
   // TODO: implement step
   cy.get('.theater-container');
-  cy.screenshot('.theater-container');
+  // cy.screenshot('.theater-container');
   cy.get('.theater-container').should('exist');
 });
 
@@ -49,7 +49,8 @@ Then('the system notifies that all seats are {string}.', (a) => {
 
 Then('the user verify that no seats are visible.', () => {
   // TODO: implement step
-  cy.get('.seats-explained > :nth-child(3)').should('be.visible');
+  // cy.get( '.seats-explained > :nth-child(3)' ).should( 'be.visible' ); 
+  cy.get( '.default-seat' ).should( 'have.class', 'occupied-seat' );
 });
 
 When( 'the user selects sample movie and show time and then clicks on the submit button', () => {
