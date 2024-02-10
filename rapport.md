@@ -3,7 +3,6 @@
 - YevShch = Yevheniia Shcherbakova
 - Nebshi = Neby Adhane
 - Jensju = Jens Sjunnesson
-- Nebshi = Neby Adhane
 - Esra   = Esra Unal
 - Gursell = Gursel Unal
 
@@ -20,7 +19,7 @@ Vi testar följande features:
   * Här kontrollerar vi om användare får en bokningsbekräftelse efter slutförd bokningen och om den bekräftelsen innehåller alla bokningsuppgifter, som bokad plats, en unik kod, ett namn på film samt datum och tid. Vi har testat dem i olika scenarier:
   - att inloggad användare får bokningsbekräftelse som innehåller alla bokningsdetaljer; 
   - att utloggad användare får bokningsbekräftelse; 
-  - att inloggad användare får bokningsbekräftelse även om användare anger någon annans mejl.
+  - att inloggad användare får bokningsbekräftelse även om användare anger någon annans mejladress.
 
 * Feature: Ticket price
   * I den feature checkar vi om det finns möjlighet att boka platser för olika priser och att totalt pris räknas rätt:
@@ -97,11 +96,14 @@ Vi testar följande features:
   - klickar på resetknappen
   - Återställer kalenderdatumet till default-datum
   
-* Feature: Testet kontrollerar om man kan se detaljerna i en film (bild, trailer, beskrivning, skådespelare, regissör etc).
+* Feature: Movie Details Page
+  * Testet kontrollerar om man kan se detaljerna i en film (bild, trailer, beskrivning, skådespelare, regissör etc).
 
-* Feature: Testet kontrollerar om man kan se de ledig platserna i hallen.
+* Feature: Check available places 
+   *Testet kontrollerar om man kan se de lediga platser i hallen.
 
-* Feature: Testet kontrollerar synligheten för Om oss-sidan.
+* Feature: Check "Om oss" in the footer 
+  *Testet kontrollerar synligheten för Om oss-sidan.
 
 * Feature: View of movie trailers.
   - Att klicka på "movies" för att se "trailer".
@@ -115,22 +117,18 @@ Vi testar följande features:
 
 * Feature: Cancel a booking 
   - Att kontrollera om man kan logga in
-  - Att gå vidare till bokningsdetaljer efter loggning in
-  - Att avboka en bokning so att man inte tar upp plats för någon annan.
+  - Att gå vidare till bokningsdetaljer efter inloggning
+  - Att avboka en bokning så att man inte tar upp plats för någon annan.
 
-* Berätta om feature B
-  * Eventuellt beskriv scenarier kortfattat.
-* Berätta om feature C
-  * Eventuellt beskriv scenarier kortfattat.
 
 ### Vad visar testerna på - finns det buggar/fel i produkten? 
 De flesta scenarier går igenom utan fel, dock visar följande scenarier på buggar/fel i produkten.
-Scenario där man matar in en inkorrekt mejladress i slutet av bokningen visar att en inmatad mejladress i fel format tillåts.  (exempel med mejladress - "test@"). 
+Scenario där man matar in en inkorrekt mejladress i slutet av bokningen visar att mejladress i fel format tillåts (exempelen som innehåller @). 
 
 I scenarier som gäller filter feature finns flera buggar: 
   - Användare får välja fler platser/tillgängliga platser än det finns i salongen och får inget alert-meddelande eller liknande som förhindrar användaren att fortsätta till nästa steg i bokningen. 
 
-  - När användare väljer en film från PDP (detaljsida) filtreras inte visningar i en visningslista efter datum och det är tillåtet att boka platser på en visning som redan har spelats.
+  - När användare väljer en film från detaljsida filtreras inte visningar i en visningslista efter datum och det är tillåtet att boka platser på en visning som redan har spelats.
 
 I scenarier som går igenom utan fel upptäckte vi en brist i programmet. 
   Exempelvis: I ett scenario där en inloggad användare bokar plats och anger någon annans mejl-adress, kommer användaren som gör bokningn inte att se bekräftelsen i sina aktiva bokningar på sitt konto. Inte heller den användare vars mejladress angivits kommer kommer att få bekräftelse till sitt konto (om denne har ett konto vill säga). Hen får bara en bekräftelse på sitt mejl. Och ingen av de två användare kan avboka de platser som bokats.
@@ -138,12 +136,9 @@ I scenarier som går igenom utan fel upptäckte vi en brist i programmet.
 I scenarier för Seats booking går det maximalt att boka så många platser som följer fram till nästkommande reda bokade stol. 
   Exempelvis går det inte att göra en bokning för sex personer vid samma bokningstillfälle om det finns max fem stolar i en följd, även om det finns fler lediga platser i salongen. Det krävs då en extra bokningsprocess.
 
-Buggar som hittades under testning, men som inte är kopplade till någon feature:
-  1. Sidan kraschar om man är inloggad längre än en timme (Det verkar som att den buggen påverkar testprocessen i cypress när man kör flera tester med inlogningen i samma feature fil. Cypress ger error 200 och kan inte ladda ner hemsidan för fortsätta tester.) 
+Buggar som hittades under testning (uppfoskningstestning), men som inte är kopplade till någon feature:
+  1. Sidan kraschar om man är inloggad längre än en timme (Det verkar som att den buggen påverkar testprocessen i cypress när man kör flera tester med inlogningen i samma feature fil. Cypress ger error 200 och kan inte ladda ner hemsidan för att fortsätta tester.) 
 
-
-Scenariobeskrivning... samt vilken fel bugg
-* Eventuellt beskriv scenarier kortfattat.
 
 #### Test Problem
 
